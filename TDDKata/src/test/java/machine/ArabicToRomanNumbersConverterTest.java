@@ -1,6 +1,8 @@
 package machine;
 
-import org.junit.Assert;
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.core.Is.is;
+
 import org.junit.Test;
 
 /*
@@ -13,21 +15,26 @@ public class ArabicToRomanNumbersConverterTest {
 
 	@Test
 	public void testArabicNumberOneToRomanNumberConversion() throws Exception {
-		Assert.assertEquals("I", arabicToRomanNumbersConverter.convert(1));
+		assertThat(arabicToRomanNumbersConverter.convert(1), is("I"));
+	}
+
+	@Test
+	public void testArabicNumberFiveToRomanNumberConversion() throws Exception {
+		assertThat(arabicToRomanNumbersConverter.convert(5), is("V"));
 	}
 
 	@Test
 	public void testArabicNumberTenToRomanNumberConversion() throws Exception {
-		Assert.assertEquals("X", arabicToRomanNumbersConverter.convert(10));
+		assertThat(arabicToRomanNumbersConverter.convert(10), is("X"));
 	}
 
 	@Test
 	public void testArabicNumberElevenToRomanNumberConversion() throws Exception {
-		Assert.assertEquals("XI", arabicToRomanNumbersConverter.convert(11));
+		assertThat(arabicToRomanNumbersConverter.convert(11), is("XI"));
 	}
 
 	@Test
 	public void testArabicNumberTwelveToRomanNumberConversion() throws Exception {
-		Assert.assertEquals("XII", arabicToRomanNumbersConverter.convert(12));
+		assertThat(arabicToRomanNumbersConverter.convert(12), is("XII"));
 	}
 }
