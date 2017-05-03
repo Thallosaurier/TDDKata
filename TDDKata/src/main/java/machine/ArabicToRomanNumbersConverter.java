@@ -13,6 +13,7 @@ public class ArabicToRomanNumbersConverter {
 			}
 		}
 		romanNumber = romanNumber.replace("IIIII", "V");
+		romanNumber = romanNumber.replace("VV", "XXXXX");
 		return romanNumber;
 	}
 }
